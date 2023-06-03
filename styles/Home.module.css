@@ -19,19 +19,19 @@
   gap: 0.8rem;
 }
 
-
 .mobile {
   display: none;
 }
 
 .AppNavLinks {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 1rem 2rem 1rem 2rem;
   width: 100%;
-  padding: 1rem;
   position: fixed;
   bottom: 0;
   background-color: white;
+  align-items: center;
 }
 
 .AppNavLinks li {
@@ -39,8 +39,8 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  font-size: 12px;
 }
-
 
 .Header {
   width: 90%;
@@ -61,10 +61,16 @@
 
 .flexContainer {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .row {
+  width: 100%;
+  display: flex;
+  height: 120vh;
+}
+
+.rowInverted {
   width: 100%;
   display: flex;
   height: 120vh;
@@ -78,21 +84,20 @@
   font-size: 45px;
   position: absolute;
   bottom: 2%;
-  right: 3%;
+  right: 5%;
   display: inline;
+  width: 100%;
+  text-align: end;
 }
 .artistsText {
   font-size: 45px;
-  position: absolute;
   top: 2%;
   left: 3%;
 }
 .artistsText2 {
   font-size: 25px;
-  position: absolute;
-  bottom: 10%;
-  width: 90%;
-  left: 5%;
+  text-align: center;
+  width: 70%;
 }
 .image {
   width: 100%;
@@ -101,10 +106,6 @@
   overflow: hidden;
 }
 .textContainer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,6 +115,7 @@
 .centeredText {
   text-align: center;
   font-size: 25px;
+  width: 70%;
 }
 .centeredText2 {
   text-align: center;
@@ -130,7 +132,7 @@
   margin: auto;
   align-items: center;
   text-align: center;
-  padding: 8rem;
+  padding: 5rem;
 }
 .Newsletter form input {
   padding: 2vh;
@@ -192,7 +194,7 @@
 
 .heroText {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -218,11 +220,11 @@
   font-family: "FiveSerifLightItalic";
   display: inline;
   font-size: 50px;
-  margin-right: 3%;
+  margin-right: 14px;
 }
 .writtenFoo {
   font-family: "FiveSerifLightItalic";
-  font-size: 300px;
+  font-size: 240px;
   justify-content: center;
   display: inline;
   color: var(--accent-color);
@@ -271,8 +273,7 @@
   margin-top: 4vh;
 }
 .Footer {
-  padding: 0vh 0vh 2vh 3vh;
-  margin-top: 7vh;
+  padding: 2rem;
   color: white;
   background-color: var(--main-black);
 }
@@ -350,8 +351,7 @@
     font-size: 20px;
   }
   .buyTickets {
-    bottom: 3%;
-    font-size: 30px;
+    display: none;
   }
   .writtenBuy {
     font-size: 35px;
@@ -366,63 +366,67 @@
   }
 
   .Footer {
-    padding: 0vh 0vh 6vh 3vh;
     margin-top: 7vh;
     color: white;
     background-color: var(--main-black);
   }
 
   .row {
-    flex-direction: column;
-    height: auto;
-    align-items: center;
     width: 100%;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rowInverted {
+    width: 100%;
+    display: flex;
+    height: auto;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   .box {
-    flex-basis: 100%;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    margin-bottom: 2rem;
-  }
-
-  .box:nth-child(2 + 1) {
-    order: -1; /* Reverses the order of the 3rd and 4th boxes */
   }
 
   .artistsText {
     font-size: 25px;
     position: static;
     text-align: center;
+    width: 100%;
   }
 
   .artistsText2 {
-    width: 90%;
+    width: 100%;
     margin: auto;
     font-size: 14px;
     position: static;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-top: 2vh;
   }
 
   .textContainer {
     position: static;
-    top: auto;
-    left: auto;
     transform: none;
-    height: auto;
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
   }
 
   .centeredText {
     text-align: center;
     font-size: 18px;
-    width: 70%;
+    width: 100%;
   }
 
   .centeredText2 {
     text-align: center;
     font-size: 25px;
+    width: 100%;
   }
 
   .centeredText3 {
@@ -432,13 +436,18 @@
 
   .Newsletter {
     width: 100%;
-    padding: 4rem;
+    padding: 2rem;
+    font-size: 18px;
+  }
+
+  .Newsletter h3 {
+    font-size: 22px;
+    margin-bottom: 0;
   }
 
   .Footerbox {
     flex-direction: column;
     gap: 2vh;
-    padding: 3vh;
   }
 
   .leftFooter {
@@ -446,24 +455,31 @@
   }
 
   .Footer {
-    padding: 2vh 0vh;
+    padding-bottom: 12vh;
   }
 
   .landingLetters h2 {
-    font-size: 40px;
-    padding-top: 15vh;
-    padding-bottom: 15vh;
+    font-size: 36px;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
   }
 
   .buttonText {
     font-size: 12px;
     text-align: center;
     position: relative;
-    margin-top: 5vh;
-    margin-left: 40%;
+    margin-top: 2.6vh;
+    width: 100%;
   }
 
   .writtenBuyTickets {
     font-size: 30px;
+  }
+
+  .flexContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
   }
 }

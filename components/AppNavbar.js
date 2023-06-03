@@ -10,8 +10,8 @@ function AppNavbar() {
           <Link href="./">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               fill="currentColor"
               class="bi bi-house"
               viewBox="0 0 16 16"
@@ -32,8 +32,8 @@ function AppNavbar() {
           <Link href="./program">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               fill="currentColor"
               class="bi bi-calendar-minus"
               viewBox="0 0 16 16"
@@ -48,8 +48,8 @@ function AppNavbar() {
         <li>
           <Link href="./tickets">
             <svg
-              width="30"
-              height="22"
+              width="26"
+              height="18"
               viewBox="0 0 34 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +70,8 @@ function AppNavbar() {
           <Link href="./basket">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               fill="currentColor"
               class="bi bi-bag-dash"
               viewBox="0 0 16 16"

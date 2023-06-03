@@ -21,7 +21,7 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-      <p className={styles.dates}>01.01 ⸺ 31.21.2023</p>
+      <p className={styles.dates}>01.01 ⸺ 31.12.2023</p>
       <Link href="./tickets">
         {" "}
         <p className={styles.buyTickets}>

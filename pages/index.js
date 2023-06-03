@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { HeroSection } from "@/components/HeroSection";
 import { Newsletter } from "@/components/Newsletter";
+import Link from "next/link";
 
 export default function Home({ data }) {
   return (
@@ -18,43 +19,87 @@ export default function Home({ data }) {
           {" "}
           <h2>
             {" "}
-
-           
-           <sup className={styles.about}>(ABOUT) </sup> <div className={styles.written}>foo</div>fest ⸺ is the gateway to a
+            <sup className={styles.about}>(ABOUT) </sup>{" "}
+            <div className={styles.written}>foo</div>fest ⸺ is the gateway to a
             mesmerizing journey where the Nordic summer ignites, the midnight
             sun dances, and the music takes center stage, enveloping you in an
             unforgettable celebration of sound and sensation.
           </h2>{" "}
         </div>
         <div className={styles.flexContainer}>
-      <div className={styles.row}>
-        <div className={styles.box}>
-          <img src="pics/landing1.webp" alt="First Image" className={styles.image} />
-        </div>
-        <div className={styles.box}>
-        <div className={styles.textContainer}> <p className={styles.centeredText}>“We are <span className={styles.writtenBox}> 24 hours</span> a day, <span className={styles.writtenBox}>7 days</span> a week, <span className={styles.writtenBox}>365 days</span> a year. ”</p></div>
-          <p className={styles.buttonText}> <div className={styles.writtenBuyTickets}>Buy</div>Tickets →</p>
-        </div>
-      </div>
-      <div className={styles.row}>
-        <div className={styles.box}>
-       <p className={styles.artistsText}> <span className={styles.writtenBuyTickets}>New</span>Artists →</p>
-          <p className={styles.artistsText2}>“ 시간 그 허망함 속에 이젠 그만 나오려 해요 ⸺ Time, amid that emptiness, I'm about to <span className={styles.written}> leave</span> now. ”</p>
-        </div>
-        <div className={styles.box}>
-          <img src="pics/landing2.webp" alt="Second Image" className={styles.image} />
-        </div>
-      </div>
-      <div className={styles.row}>
-        <div className={styles.box}>
-          <img src="pics/landing3.webp" alt="Second Image"  className={styles.image} />
-        </div>
-        <div className={styles.box}>
-        <div className={styles.textContainer}> <p className={styles.centeredText2}><span className={styles.writtenBuyTickets}>See</span>Program →</p><p className={styles.centeredText3}>More music and events will be added to the program.</p></div>
+          <div className={styles.row}>
+            <div className={styles.box}>
+              <img
+                src="pics/landing1.webp"
+                alt="First Image"
+                className={styles.image}
+              />
+            </div>
+            <div className={styles.box}>
+              <div className={styles.textContainer}>
+                {" "}
+                <p className={styles.centeredText}>
+                  “We are <span className={styles.writtenBox}> 24 hours</span> a
+                  day, <span className={styles.writtenBox}>7 days</span> a week,{" "}
+                  <span className={styles.writtenBox}>365 days</span> a year. ”
+                </p>
+                <p className={styles.buttonText}>
+                  {" "}
+                  <div className={styles.writtenBuyTickets}>Buy</div>Tickets →
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.rowInverted}>
+            <div className={styles.box}>
+              <div className={styles.textContainer}>
+                <Link href="./lineup">
+                  <p className={styles.artistsText}>
+                    {" "}
+                    <span className={styles.writtenBuyTickets}>New</span>Artists
+                    →
+                  </p>
+                </Link>
 
+                <p className={styles.artistsText2}>
+                  “ 시간 그 허망함 속에 이젠 그만 나오려 해요 ⸺ Time, amid that
+                  emptiness, I'm about to{" "}
+                  <span className={styles.written}> leave</span> now. ”
+                </p>
+              </div>
+            </div>
+            <div className={styles.box}>
+              <img
+                src="pics/landing2.webp"
+                alt="Second Image"
+                className={styles.image}
+              />
+            </div>
+          </div>
+          <div className={styles.row}>
+            <div className={styles.box}>
+              <img
+                src="pics/landing3.webp"
+                alt="Second Image"
+                className={styles.image}
+              />
+            </div>
+            <div className={styles.box}>
+              <div className={styles.textContainer}>
+                {" "}
+                <Link href="./program">
+                  <p className={styles.centeredText2}>
+                    <span className={styles.writtenBuyTickets}>See</span>Program
+                    →
+                  </p>
+                </Link>
+                <p className={styles.centeredText3}>
+                  More music and events will be added to the program.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
         <Newsletter />
       </main>
     </>
