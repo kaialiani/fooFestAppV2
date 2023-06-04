@@ -6,7 +6,7 @@
   border-radius: 20px;
   background-color: #efeff0;
   width: 24rem;
-  padding: 1rem;
+  padding: 3rem;
   text-align: left;
   color: #1e1e1e;
 }
@@ -49,7 +49,6 @@
 .Steps {
   width: 80%;
   margin: auto;
-  
 }
 
 .CheckoutButtons {

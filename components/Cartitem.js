@@ -26,15 +26,17 @@ function Cartitem(props) {
     <li className={styles.ticket}>
       <h4 className={styles.name}> {props.name} </h4>{" "}
       <p className={styles.price}> DKK {props.price},-</p>
-      <button className={styles.addRemove} onClick={removeOne}>
-        {" "}
-        -{" "}
-      </button>
-      {props.amount}
-      <button className={styles.addRemove} onClick={addOne}>
-        {" "}
-        +{" "}
-      </button>
+      <div className={styles.addRemoveContainer}>
+        <button className={styles.addRemove} onClick={removeOne}>
+          {" "}
+          -{" "}
+        </button>
+        {props.amount}
+        <button className={styles.addRemove} onClick={addOne}>
+          {" "}
+          +{" "}
+        </button>
+      </div>
     </li>
   );
 }

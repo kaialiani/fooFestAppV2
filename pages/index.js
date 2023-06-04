@@ -43,10 +43,12 @@ export default function Home({ data }) {
                   day, <span className={styles.writtenBox}>7 days</span> a week,{" "}
                   <span className={styles.writtenBox}>365 days</span> a year. ”
                 </p>
-                <p className={styles.buttonText}>
-                  {" "}
-                  <div className={styles.writtenBuyTickets}>Buy</div>Tickets →
-                </p>
+                <Link href="./tickets">
+                  <p className={styles.buttonText}>
+                    {" "}
+                    <div className={styles.writtenBuyTickets}>Buy</div>Tickets →
+                  </p>
+                </Link>
               </div>
             </div>
           </div>

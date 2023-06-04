@@ -1,6 +1,8 @@
 .BookingItem {
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
+  color: var(--main-black);
 }
 
 .BookingItem span {

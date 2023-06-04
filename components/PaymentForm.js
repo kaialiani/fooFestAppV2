@@ -3,7 +3,8 @@ import styles from "@/styles/PaymentForm.module.css";
 import { usePaymentInputs } from "react-payment-inputs";
 
 export default function PaymentInputs() {
-  const { getCardNumberProps, getExpiryDateProps, getCVCProps } = usePaymentInputs();
+  const { getCardNumberProps, getExpiryDateProps, getCVCProps } =
+    usePaymentInputs();
 
   const [cardNumber, setCardNumber] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
@@ -47,7 +48,10 @@ export default function PaymentInputs() {
           </label>
           <label>
             CVC
-            <input {...getCVCProps({ onChange: handleChangeCVC })} value={cvc} />
+            <input
+              {...getCVCProps({ onChange: handleChangeCVC })}
+              value={cvc}
+            />
           </label>
         </div>
       </div>

@@ -482,4 +482,8 @@
     flex-wrap: wrap;
     height: auto;
   }
+
+  .thankYouContainer h4 {
+    width: 200%;
+  }
 }

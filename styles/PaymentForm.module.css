@@ -14,3 +14,13 @@
   display: flex;
   gap: 2rem;
 }
+
+@media (max-width: 768px) {
+  .paymentFormFlex > div {
+    flex-direction: column;
+  }
+
+  .paymentFormFlex {
+    width: 100%;
+  }
+}

@@ -23,8 +23,12 @@ export default function CampingArea(props) {
     <div
       className={styles.CampingArea}
       style={{
-        backgroundColor: props.selectedCamping.name === props.area ? "#E3FFB7" : "",
-        outline: props.selectedCamping.name === props.area ? "2px solid #1E1E1E" : "",
+        backgroundColor:
+          props.selectedCamping.name === props.area ? "#DFFE00" : "",
+        outline:
+          props.selectedCamping.name === props.area
+            ? "1.2px solid #1E1E1E"
+            : "",
       }}
       onClick={() => {
         props.setSelectedCamping({

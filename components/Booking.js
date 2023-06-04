@@ -14,7 +14,10 @@ export default function Booking(props) {
 
   const [total, setTotal] = useState(99 + props.totalPrice);
 
-  const items = [...props.products, { name: "Booking Fee", type: "Fee", price: 99, id: uuidv4() }];
+  const items = [
+    ...props.products,
+    { name: "Booking Fee", type: "Fee", price: 99, id: uuidv4() },
+  ];
 
   useEffect(() => {
     setTotal(99 + props.totalPrice);
@@ -27,9 +30,16 @@ export default function Booking(props) {
 
   return (
     <div className={styles.Booking}>
-      <h1>Booking Summary</h1>
+      <h1>Your basket</h1>
       {items.map((item) => {
-        return <BookingItem key={item.id} name={item.name} price={item.price} item={item} />;
+        return (
+          <BookingItem
+            key={item.id}
+            name={item.name}
+            price={item.price}
+            item={item}
+          />
+        );
       })}
 
       <p>

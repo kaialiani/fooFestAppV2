@@ -1,22 +1,26 @@
-.ticketPage  {
- padding-left: 6vh;
- padding-right: 6vh;
- padding-top: 4vh;
- width: 320px;
- height: 250px;
+.ticketPage {
+  padding-left: 6vh;
+  padding-right: 8vh;
+  padding-top: 4vh;
   background-color: var(--grey);
-  border-radius:7%;
-  margin-bottom: 10%;
+  border-radius: 20px;
+  width: 400px;
   position: relative;
 }
 .ticketPage p {
   padding-top: 0vh;
- }
- .ticketPage button {
-  position: absolute;
-  top: 60%; 
-  right: 2rem;
- }
+}
+
+.ticketPage h3 {
+  width: 120%;
+}
+.ticketPage button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Studio6Regular";
+}
 
 .wrapper {
   padding: 5vh;
@@ -43,8 +47,12 @@
   padding-top: 5vh;
 }
 .ticket {
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  display: flex;
+  align-items: center;
+}
+
+.ticket h4 {
+  margin-bottom: 0;
 }
 
 .checkout {
@@ -52,10 +60,15 @@
   background-color: var(--accent-color);
   border-radius: 50px;
   color: var(--main-black);
+  font-size: 14px;
 }
 .checkout:hover {
   background-color: #d4f507;
-  opacity:1;
+  opacity: 1;
+}
+
+.clearCheckout {
+  display: inline;
 }
 .ticketstyle {
   display: flex;
@@ -64,19 +77,29 @@
   justify-content: center;
   gap: 20%;
   padding-top: 5vh;
+  padding-bottom: 8vh;
 }
 .addRemove {
-  padding: 1vh;
-  height: 30px;
-  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem;
+  height: 20px;
+  width: 20px;
   background-color: var(--accent-color);
-  border-radius: 50%;
+  border-radius: 100px;
   color: black;
   border: none;
   margin: 0.5vh 1vh 0.5vh 1vh;
 }
-.amount{
-margin-top: 7vh;
+
+.addRemoveContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.amount {
+  margin-top: 7vh;
 }
 .delete {
   background-color: #efefef;
@@ -84,6 +107,7 @@ margin-top: 7vh;
   padding: 1.9vh;
   border: none;
   text-decoration: none;
+  font-size: 14px;
 }
 .delete:hover {
   background-color: #e7e7e7;
@@ -132,4 +156,42 @@ margin-top: 7vh;
     font-size: 4em;
   }
 
+  .ticketstyle {
+    flex-direction: column;
+    gap: 5vh;
+    margin-bottom: 4vh;
+  }
+
+  .ticketPage {
+    width: 100%;
+  }
+
+  .formContainer {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .userInfoForm {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper {
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .wrapper h1 {
+    line-height: 3rem;
+  }
+
+  .labelAndInput {
+    width: 100%;
+  }
+
+  .wrapper form input,
+  .wrapper form label {
+    margin-left: 0vh;
+  }
 }
