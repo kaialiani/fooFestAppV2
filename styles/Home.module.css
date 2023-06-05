@@ -486,4 +486,8 @@
   .thankYouContainer h4 {
     width: 200%;
   }
+
+  .Newsletter {
+    padding-bottom: 8rem;
+  }
 }

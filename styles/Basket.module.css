@@ -61,6 +61,10 @@
   border-radius: 50px;
   color: var(--main-black);
   font-size: 14px;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .checkout:hover {
   background-color: #d4f507;
@@ -68,7 +72,8 @@
 }
 
 .clearCheckout {
-  display: inline;
+  display: flex;
+  align-items: center;
 }
 .ticketstyle {
   display: flex;
@@ -102,12 +107,16 @@
   margin-top: 7vh;
 }
 .delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #efefef;
   border-radius: 50px;
-  padding: 1.9vh;
-  border: none;
-  text-decoration: none;
+  padding: 0.1rem;
   font-size: 14px;
+  margin-right: 0.6rem;
+  height: 3rem;
+  width: 3rem;
 }
 .delete:hover {
   background-color: #e7e7e7;
@@ -158,12 +167,14 @@
 
   .ticketstyle {
     flex-direction: column;
-    gap: 5vh;
+    gap: 4vh;
     margin-bottom: 4vh;
   }
 
   .ticketPage {
-    width: 100%;
+    width: 80vw;
+    padding-left: 2rem;
+    padding-top: 2rem;
   }
 
   .formContainer {
@@ -178,7 +189,7 @@
   }
 
   .wrapper {
-    padding: 1rem;
+    padding: 2rem;
     align-items: center;
   }
 

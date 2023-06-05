@@ -19,7 +19,9 @@ function Ticket(props) {
     <article className={styles.ticketPage}>
       <p>{props.id}</p>
       <h3>{props.name}</h3>
-      <p>Price: DKK {props.price},- </p>
+      <h4>
+        <strong>DKK {props.price},- </strong>{" "}
+      </h4>
 
       <button onClick={addToBasket}>
         <svg
