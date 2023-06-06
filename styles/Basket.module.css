@@ -163,12 +163,15 @@
 @media (max-width: 768px) {
   .wrapper h1 {
     font-size: 4em;
+    margin-bottom: 0;
+    margin-top: 5vh;
   }
 
   .ticketstyle {
     flex-direction: column;
     gap: 4vh;
     margin-bottom: 4vh;
+    padding-top: 4vh;
   }
 
   .ticketPage {
@@ -204,5 +207,22 @@
   .wrapper form input,
   .wrapper form label {
     margin-left: 0vh;
+  }
+
+  .ticketPage h3 {
+    margin-bottom: 2vh;
+  }
+
+  .ticket {
+    margin-top: 2rem;
+  }
+
+  .name {
+    width: 100%;
+    justify-self: center;
+  }
+
+  .price {
+    width: 100%;
   }
 }

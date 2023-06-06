@@ -60,7 +60,24 @@
     flex-basis: 100vw;
   }
 
+  .artistLineup {
+    padding-bottom: 8rem;
+  }
+
   .hidden {
     display: none;
+  }
+
+  .written {
+    font-size: 1em;
+  }
+
+  .wrapper {
+    padding: 2rem;
+  }
+
+  .wrapper h1 {
+    font-size: 4em;
+    margin-bottom: 0;
   }
 }

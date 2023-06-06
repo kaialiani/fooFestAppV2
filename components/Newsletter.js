@@ -11,7 +11,7 @@ export const Newsletter = () => {
       <form>
         <label htmlFor="newsletterInput">
           <input
-            placeholder="Insert your email.."
+            placeholder="foo@example.com"
             id="newsletterInput"
             type="text"
             name="newsletterInput"

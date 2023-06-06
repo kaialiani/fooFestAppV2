@@ -220,7 +220,7 @@
   font-family: "FiveSerifLightItalic";
   display: inline;
   font-size: 50px;
-  margin-right: 14px;
+  margin-right: 10px;
 }
 .writtenFoo {
   font-family: "FiveSerifLightItalic";
@@ -484,7 +484,11 @@
   }
 
   .thankYouContainer h4 {
-    width: 200%;
+    width: 130%;
+  }
+
+  .thankYouContainer {
+    padding: 6rem;
   }
 
   .Newsletter {

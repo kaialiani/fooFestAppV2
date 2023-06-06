@@ -97,7 +97,7 @@ button {
   border-radius: 50px;
   color: black;
   margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
 }
 button:hover {
   background-color: #d4f507;

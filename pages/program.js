@@ -56,7 +56,6 @@ function Program({ venues }) {
             </Tabs>
           </div>
         </div>
-        <Newsletter />
       </main>
     </>
   );

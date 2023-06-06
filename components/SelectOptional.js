@@ -42,9 +42,6 @@ function SelectOptional(props) {
         className={styles.CampingType}
         style={{
           backgroundColor: selectedOptional.includes("green") ? "#DFFE00" : "",
-          outline: selectedOptional.includes("green")
-            ? "1.2px solid #1E1E1E"
-            : "",
         }}
         onClick={() => {
           handleSelected("green");
@@ -64,9 +61,6 @@ function SelectOptional(props) {
         className={styles.CampingType}
         style={{
           backgroundColor: selectedOptional.includes("setup") ? "#DFFE00" : "",
-          outline: selectedOptional.includes("setup")
-            ? "1.2px solid #1E1E1E"
-            : "",
         }}
         onClick={() => {
           handleSelected("setup");
