@@ -238,17 +238,16 @@ function checkout() {
     <>
       <div className={styles.CheckoutButtons}>
         {current > 0 && (
-          <Button
-            style={{
-              margin: "0 8px",
-            }}
-            onClick={() => prev()}
-          >
+          <Button className={styles.previousButton} onClick={() => prev()}>
             Previous
           </Button>
         )}
         {current < steps.length - 1 && (
-          <Button type="primary" onClick={() => next()}>
+          <Button
+            className={styles.nextButton}
+            type="primary"
+            onClick={() => next()}
+          >
             Next
           </Button>
         )}
