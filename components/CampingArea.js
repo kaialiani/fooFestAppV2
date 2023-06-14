@@ -19,12 +19,16 @@ export default function CampingArea(props) {
     console.log(props.products);
   }
 
+  const isAvailable = props.available > 0;
+
   return (
     <div
-      className={styles.CampingArea}
+      className={`${styles.CampingArea} ${isAvailable ? "" : styles.disabled}`}
       style={{
         backgroundColor:
           props.selectedCamping.name === props.area ? "#DFFE00" : "",
+        cursor: isAvailable ? "pointer" : "not-allowed",
+        pointerEvents: isAvailable ? "auto" : "none",
       }}
       onClick={() => {
         props.setSelectedCamping({
