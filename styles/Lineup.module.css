@@ -49,6 +49,31 @@
   width: 100%;
 }
 
+.artistInfoFlex {
+  display: flex;
+  padding-bottom: 2rem;
+  justify-content: space-around;
+}
+
+.artistInfo {
+  flex-basis: 50%;
+  padding: 1rem;
+}
+
+.bandMembers {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.bandMembers h4 {
+  margin-bottom: 0.8rem;
+}
+
+.artistImage {
+  width: 30rem;
+  object-fit: contain;
+}
+
 @media (max-width: 768px) {
   .gridImages {
     width: 100%;
@@ -79,5 +104,20 @@
   .wrapper h1 {
     font-size: 4em;
     margin-bottom: 0;
+  }
+
+  .artistInfoFlex {
+    flex-direction: column-reverse;
+    padding-bottom: 6rem;
+  }
+
+  .artistInfo {
+    flex-basis: 50%;
+    padding: 1rem;
+  }
+
+  .artistImage {
+    width: 100%;
+    object-fit: contain;
   }
 }
