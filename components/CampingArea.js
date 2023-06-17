@@ -3,20 +3,38 @@ import React from "react";
 
 export default function CampingArea(props) {
   function handleClick() {
-    if (props.products.some((product) => product["type"] === "Camping")) {
-      const campingInfo = props.products.map((product) => {
-        if (product.type === "Camping") {
-          return { ...product, name: props.area, id: props.id };
-        }
-        return product;
+    const selectedCamping = {
+      name: props.area,
+      type: "Camping",
+      id: props.id,
+    };
+
+    if (props.selectedCamping.name === props.area) {
+      props.setSelectedCamping({
+        name: "",
+        type: "Camping",
+        id: "",
       });
 
-      props.setProducts(campingInfo);
+      props.setProducts((old) =>
+        old.filter((product) => product.id !== props.id)
+      );
     } else {
-      props.setProducts((old) => old.concat(props.selectedCamping));
-    }
+      if (props.products.some((product) => product.type === "Camping")) {
+        const campingInfo = props.products.map((product) => {
+          if (product.type === "Camping") {
+            return { ...product, name: props.area, id: props.id };
+          }
+          return product;
+        });
 
-    console.log(props.products);
+        props.setProducts(campingInfo);
+      } else {
+        props.setProducts((old) => old.concat(selectedCamping));
+      }
+
+      props.setSelectedCamping(selectedCamping);
+    }
   }
 
   const isAvailable = props.available > 0;
