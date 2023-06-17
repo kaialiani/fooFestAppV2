@@ -254,6 +254,7 @@ function checkout() {
 
         {current === steps.length - 1 && (
           <Button
+            className={styles.payButton}
             href="/thankYou"
             type="primary"
             onClick={() => {
