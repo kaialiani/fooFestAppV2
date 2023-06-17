@@ -108,4 +108,46 @@
   .CampingType img {
     width: 60%;
   }
+
+  .nextButton {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50px;
+    color: transparent !important;
+    background-image: url("../public/pics/right-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+
+  .previousButton {
+    position: fixed;
+    bottom: 6rem;
+    left: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50px;
+    background-color: #e8e8e8;
+    color: transparent !important;
+    background-image: url("../public/pics/left-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+
+  .nextButton:active,
+  .previousButton:active {
+    color: transparent !important;
+  }
+  .hidden {
+    display: none;
+  }
+
+  .ant-btn > span {
+    visibility: hidden;
+    display: none;
+  }
 }
