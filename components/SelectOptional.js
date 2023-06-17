@@ -1,11 +1,28 @@
 import React, { useState } from "react";
 import styles from "@/styles/Checkout.module.css";
 import { v4 as uuidv4 } from "uuid";
+import { useContext } from "react";
+import { StoreContext } from "@/contexts/storeContext";
 
 function SelectOptional(props) {
   const [selectedOptional, setSelectedOptional] = useState([]);
-
+  const { data } = useContext(StoreContext);
+  const { basket } = data;
+  const amount = basket.reduce((total, item) => total + item.amount, 0);
+  console.log(amount);
   function handleClick(name, price, id) {
+    if (name === "Set-up Service") {
+      if (amount % 3 === 0) {
+        price = 399 * (amount / 3); // Multiply the price by one-third of the amount for 3-person tents
+      } else if (amount % 2 === 0) {
+        price = 299 * (amount / 2); // Multiply the price by half the amount for 2-person tents
+      }
+    } else if (name === "Green Camping") {
+      // Handle other optional items if needed
+      price = 249; // Default price
+    } else {
+      price = 0;
+    }
     const option = {
       name,
       price,
@@ -64,7 +81,7 @@ function SelectOptional(props) {
         }}
         onClick={() => {
           handleSelected("setup");
-          handleClick("Set-up Service", 299, uuidv4());
+          handleClick("Set-up Service", uuidv4());
         }}
       >
         <p>02</p>
@@ -74,7 +91,68 @@ function SelectOptional(props) {
           The crew will set up tents for you. The tents are included in the
           price.
         </p>
-        <span className={styles.Price}>DKK 299,-</span>
+        <div className={styles.flex}>
+          <div>
+            <h4 className={styles.Price}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-person-fill"
+                viewBox="0 0 16 16"
+              >
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-person-fill"
+                viewBox="0 0 16 16"
+              >
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+              </svg>{" "}
+            </h4>
+            <p>DKK 299,-</p>
+          </div>
+          <div className={styles.rightAlign}>
+            <h4 className={styles.Price}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-person-fill"
+                viewBox="0 0 16 16"
+              >
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-person-fill"
+                viewBox="0 0 16 16"
+              >
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-person-fill"
+                viewBox="0 0 16 16"
+              >
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+              </svg>
+            </h4>
+            <p>DKK 399,-</p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -44,25 +44,26 @@ function reducer(state, action) {
             return copy;
           } else {
             return item;
-
-        }
-    });
-    return {...state, basket: nextBasket}
-        } else {
-            const newItem = action.payload;
-            newItem.amount = 1;
-            return {...state, basket: state.basket.concat(newItem)}       
-        }
-    }
-
+          }
+        });
+        return { ...state, basket: nextBasket };
+      } else {
+        const newItem = action.payload;
+        newItem.amount = 1;
+        return { ...state, basket: state.basket.concat(newItem) };
+      }
+  }
 }
 
 export const StoreProvider = ({ children }) => {
   const [data, dispatch] = useReducer(reducer, initialState);
+  console.log(data);
 
   return (
     <StoreContext.Provider value={{ data }}>
-      <DispatchContext.Provider value={dispatch}>{children}</DispatchContext.Provider>
+      <DispatchContext.Provider value={dispatch}>
+        {children}
+      </DispatchContext.Provider>
     </StoreContext.Provider>
   );
 };

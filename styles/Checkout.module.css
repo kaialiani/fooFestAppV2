@@ -36,14 +36,14 @@
 
 .CampingTypeFlex {
   display: flex;
-  flex-direction: column;
   gap: 2rem;
 }
 
 .Price {
-  font-size: 22px;
+  font-size: 16px;
   margin-top: 1.6rem;
   font-weight: bold;
+  margin-bottom: 0;
 }
 
 .Steps {
@@ -84,12 +84,25 @@
   color: black !important;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightAlign {
+  text-align: right;
+}
+
 @media only screen and (max-width: 600px) {
   .CampingType {
     display: flex;
     flex-direction: column;
     width: 80vw;
     padding: 2rem;
+  }
+
+  .CampingTypeFlex {
+    flex-direction: column;
   }
 
   .CampingType img {
