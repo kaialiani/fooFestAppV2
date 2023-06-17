@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "@/styles/Lineup.module.css";
-import Image from "next/image";
 
 export default function ArtistPage() {
   const router = useRouter();
