@@ -29,7 +29,6 @@ export default function ArtistPage() {
     return <div>Loading...</div>;
   }
 
-  // Render the artist's information
   return (
     <div className={styles.artistInfoFlex}>
       <div className={styles.artistInfo}>

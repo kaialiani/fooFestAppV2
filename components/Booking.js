@@ -12,7 +12,7 @@ export default function Booking(props) {
     { type: "Green Camping", price: 249, id: 4 },
   ]; */
 
-  const [total, setTotal] = useState(99 + props.totalPrice);
+  const [total, setTotal] = useState(99 + props.totalPrice); 
 
   const items = [
     ...props.products,

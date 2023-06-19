@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { DispatchContext } from "@/contexts/storeContext";
 import styles from "@/styles/Basket.module.css";
+import { message } from "antd";
 
 function Ticket(props) {
   const dispatch = useContext(DispatchContext);
@@ -13,6 +14,7 @@ function Ticket(props) {
         name: props.name,
       },
     });
+    message.success("Ticket added successfully");
   }
 
   return (

@@ -22,6 +22,14 @@
   font-family: "Studio6Regular";
 }
 
+.hidden {
+  display: none;
+}
+
+.displayText {
+  display: block;
+}
+
 .wrapper {
   padding: 5vh;
 }
