@@ -13,13 +13,13 @@ function SelectOptional(props) {
   function handleClick(name, price, id) {
     if (name === "Set-up Service") {
       if (amount % 3 === 0) {
-        price = 399 * (amount / 3); // Multiply the price by one-third of the amount for 3-person tents
+        price = 399 * (amount / 3); 
       } else if (amount % 2 === 0) {
-        price = 299 * (amount / 2); // Multiply the price by half the amount for 2-person tents
+        price = 299 * (amount / 2); 
       }
     } else if (name === "Green Camping") {
-      // Handle other optional items if needed
-      price = 249; // Default price
+      
+      price = 249; 
     } else {
       price = 0;
     }
